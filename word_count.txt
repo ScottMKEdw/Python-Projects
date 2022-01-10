@@ -1,0 +1,9 @@
+count = dict()
+line = input('Enter a Line of Text:')
+words = line.split
+print('Words',words)
+
+for word in words:
+	count[word]=words.get(word,0) + 1
+	
+print(count)

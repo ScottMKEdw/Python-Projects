@@ -1,0 +1,31 @@
+def add_time('start','end','day'):
+	start = start.split(':')
+	end = end.split(':')
+	
+	shour = start[0]
+	noon = start[1].split(' ')[1]
+	smin = start[1]
+	
+	ehour = start[0]
+	emin = start[1]
+	
+	if (smin+emin) > 60:
+		rmin = smin + emin -60
+		rhour = shour + ehour + 1
+			if rhour > 12:
+				rhour = rhour - 12
+					if noon == AM:
+						noon = PM
+					else
+						noon = AM
+	else:
+		rmin = smin + emin
+		rhour = shour + ehour
+			if rhour > 12:
+				rhour = rhour - 12
+					if noon == AM:
+						noon = PM
+					else
+						noon = AM
+  
+  return(rhour + ':' + rmin + noon)
